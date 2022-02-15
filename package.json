@@ -1,6 +1,6 @@
 {
   "name": "wordinal",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "type": "module",
   "description": "",
   "main": "bin/main.js",
@@ -16,6 +16,10 @@
   ],
   "author": "Ashish",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asheeeshh/wordinal.git"
+  },
   "dependencies": {
     "chalk": "^5.0.0",
     "chalk-animation": "^1.6.0",
