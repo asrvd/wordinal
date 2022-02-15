@@ -14,6 +14,8 @@ $ npm install wordinal
 Start the Game.
 ```bash
 $ wordinal
+or
+$ npx wordinal
 ```
 
 ## Running Locally 🚀

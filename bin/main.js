@@ -39,6 +39,7 @@ async function welcome() {
     ${chalk.yellow('Wordinal')} is a clone of the game ${chalk.yellow('Wordle')} but you play it in the terminal.
     In Wordle you try to guess a ${chalk.yellow('5 letter word')} in 6 tries.
     After each guess, the color of the tiles will change to show how close your guess was to the word.
+    Enter q to quit the Game.
 
     ${chalk.green('Green Letter')} shows that the letter is correct and is at correct position.
     ${chalk.yellow('Yellow Letter')} shows that the letter is correct but not at correct position.
@@ -95,13 +96,17 @@ async function wordle() {
       'type': 'input',
       'message': 'Enter your guess:',
     })
-    if (guess.guess.length != 5) {
-      i=i-1; console.log(`${chalk.red('Please enter a 5 letter word!')}`); continue;
-    } else if (typeof guess.guess != 'string') {
-      i=i-1; console.log(`${chalk.red('Please enter only words not numbers!')}`); continue;
+    if (guess.guess == 'q') {
+      process.exit(1);
     } else {
-      handlegame(guess.guess, i+1)
-    }
+      if (guess.guess.length != 5) {
+        i=i-1; console.log(`${chalk.red('Please enter a 5 letter word!')}`); continue;
+      } else if (typeof guess.guess != 'string') {
+        i=i-1; console.log(`${chalk.red('Please enter only words not numbers!')}`); continue;
+      } else {
+        handlegame(guess.guess, i+1)
+      }
+    }  
   }
 }
 
