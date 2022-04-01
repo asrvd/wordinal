@@ -27,16 +27,6 @@ Install dependencies, Make sure you have `npm` and `nodejs` installed.
 ```bash
 $ npm install
 ```
-Add the following snippet to your `package.json` file.
-```json
-"bin": {
-    "wordinal": "./bin/main.js"
-  },
-```
-Create symlink.
-```bash
-$ npm link
-```
 Run the Game.
 ```bash
 $ wordinal
